@@ -31,12 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreTests.cs" />
+    <Compile Include="OpponentTests.cs" />
+    <Compile Include="RyanTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayerEvaluator.Core\PlayerEvaluator.Core.csproj">
+      <Project>{7CF599FA-3A05-47D0-8BF0-EFEFEC6CA408}</Project>
+      <Name>PlayerEvaluator.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayerEvaluator.Custom.Ryan\PlayerEvaluator.Custom.Ryan.csproj">
+      <Project>{E0AD2BE0-3EFF-4DE9-9B67-01E69F7F6A05}</Project>
+      <Name>PlayerEvaluator.Custom.Ryan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayerEvaluator.Custom.StupidOpponent\PlayerEvaluator.Custom.StupidOpponent.csproj">
+      <Project>{110AA5C8-028A-4C76-A9A5-0B3BA51DCF74}</Project>
+      <Name>PlayerEvaluator.Custom.StupidOpponent</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

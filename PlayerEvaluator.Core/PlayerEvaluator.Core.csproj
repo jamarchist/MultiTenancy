@@ -36,7 +36,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evaluator.cs" />
+    <Compile Include="IParser.cs" />
     <Compile Include="IPlayer.cs" />
+    <Compile Include="IScorer.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -37,6 +37,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scorer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayerEvaluator.Core\PlayerEvaluator.Core.csproj">
+      <Project>{7CF599FA-3A05-47D0-8BF0-EFEFEC6CA408}</Project>
+      <Name>PlayerEvaluator.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
