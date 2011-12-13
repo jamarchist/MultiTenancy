@@ -1,0 +1,10 @@
+﻿<p>Often when dealing with applications/systems that serve multiple clients, we encounter a situation where
+<ul>
+    <li>Clients share some core functionality and algorithms</li>
+    <li>Clients have custom logic that extends the core functionality</li>
+    <li>Clients have customized data structures that extend core data structures</li>
+</ul>
+The key to making this work in a maintainable way (that is, without infusing the code with crazy branching statements or writing the whole application in dynamic SQL) is maintaining a distinct separation between core and client.
+</p>
+<p><a href="https://github.com/jamarchist/MultiTenancy">Here</a> I present components from a simple, hypothetical application that demonstrates such a separation. The application is meant to evaluate whether or not a client should acquire a player for fantasy football. It contains some core functionality for doing the evaluation (it doesn't pick up a player who has never scored a point) and a core data structure that represents a player. There are two clients who extend this core functionality: me and a stupid opponent in my league. The stupid opponent is a Bears fan who only picks up Bears players. I am a player who uses some trivial evaluation strategy and also extends the core data structure with some data that represents my own opinion.</p>
+<p>The code shows an example of how to define and extend core functionality. It does <b>not</b> show how to wire everything together (dependency injection) or how to persist custom data. I may explore these topics in future posts. Also note that I called the code repository '<a href="http://en.wikipedia.org/wiki/Multitenancy">MultiTenancy</a>', but this is more likely something you'll find in multi-instance scenario. I'm using the term 'multi-client' to represent both possibilities.</p>
